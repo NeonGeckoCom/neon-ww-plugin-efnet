@@ -1,0 +1,2 @@
+EfficientWord-Net
+ovos-plugin-manager~=0.0.2
