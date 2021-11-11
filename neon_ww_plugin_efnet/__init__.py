@@ -11,22 +11,16 @@
 # limitations under the License.
 #
 import os
-import time
-from threading import Event
 
-import numpy as np
-from eff_word_net import RATE
 from eff_word_net import samples_loc
 from eff_word_net.engine import HotwordDetector
-from eff_word_net.streams import CustomAudioStream
 from eff_word_net.streams import SimpleMicStream
-
 
 from ovos_plugin_manager.templates.hotwords import HotWordEngine
 
 
 class EfficientWordNetWakeWordPlugin(HotWordEngine):
-    def __init__(self, hotword="hotkeys", config=None, lang="en-us"):
+    def __init__(self, hotword="hey_mycroft", config=None, lang="en-us"):
         super().__init__(hotword, config or {}, lang)
         self.model = self.config.get("reference_file")
         if not self.model:
