@@ -31,6 +31,12 @@ class EfficientWordNetWakeWordPlugin(HotWordEngine):
                 self.model = os.path.join(samples_loc, "siri_ref.json")
             elif hotword == "google":
                 self.model = os.path.join(samples_loc, "google_ref.json")
+            elif hotword == "firefox":
+                self.model = os.path.join(samples_loc, "firefox_ref.json")
+            elif hotword == "lights_on":
+                self.model = os.path.join(samples_loc, "lights_on_ref.json")
+            elif hotword == "lights_off":
+                self.model = os.path.join(samples_loc, "lights_off_ref.json")
             else:
                 raise FileNotFoundError("no reference_file provided for EfficientWordNet")
 
