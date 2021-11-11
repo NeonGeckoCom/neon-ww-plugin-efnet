@@ -36,7 +36,7 @@ class EfficientWordNetWakeWordPlugin(HotWordEngine):
 
         self.net = HotwordDetector(
             hotword=hotword,
-            reference_file=self.model,
+            reference_file=os.path.expanduser(self.model),
         )
         self.has_found = False
         # TODO figure out how to remove need for self.stream
